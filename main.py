@@ -20,8 +20,8 @@ def main():
             else:
                 z_factor, Pc, Tc = compute_Z_DPR(sp_gravity, temperature, pressure, fluid_type)
 
-            st.success(f"The pseudo-critical temperature of the fluid is: {Tc}")
-            st.success(f"The pseudo-critical pressure of the fluid is: {Pc}")
+            st.success(f"The pseudo-critical temperature of the fluid is: {Tc} degree Rankine")
+            st.success(f"The pseudo-critical pressure of the fluid is: {Pc} psia")
             st.success(f"The Z-Factor is: {z_factor}")
         except ValueError as e:
             st.error(f"Error: {e}")
