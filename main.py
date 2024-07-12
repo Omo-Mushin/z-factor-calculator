@@ -4,11 +4,11 @@ from DPR import compute_Z_DPR
 
 def main():
     st.title("Z-Factor Calculator")
-
+    st.info("Note: The Dranchuk-Abu-Kaseem correlation has the least error among the available methods.")
     fluid_type = st.selectbox("Fluid Type", ["NATURAL GAS", "CONDENSATE"])
     sp_gravity = st.number_input("Specific Gravity", min_value=0.0, format="%.4f")
-    temperature = st.number_input("Temperature (Rankine)", min_value=0.0, format="%.2f")
-    pressure = st.number_input("Pressure (psia)", min_value=0.0, format="%.2f")
+    temperature = st.number_input("Temperature (Rankine)", min_value=0.0,)
+    pressure = st.number_input("Pressure (psia)", min_value=0.0,)
     method = st.selectbox("Calculation Method", ["Hall-Yarborough", "Dranchuk-Abou-Kaseem", "Dranchuk-Purvis-Robinson"])
 
     if st.button("Calculate"):
