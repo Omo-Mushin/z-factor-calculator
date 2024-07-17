@@ -17,14 +17,14 @@ def calculate_coefficients_HY(t):
     return X1, X2, X3, X4
 
 def compute_reduced_rho_HY_function_HY(rho, X1, X2, X3, X4, Ppr):
-    if rho < 0 or rho >= 1:
-        raise ValueError("rho must be in the range [0, 1).")
+    # if rho < 0 or rho >= 1:
+    #     raise ValueError("rho must be in the range [0, 1).")
     rho_function = (-X1 * Ppr + (rho + rho ** 2 + rho ** 3 - rho ** 4) / (1 - rho) ** 3 - X2 * rho ** 2 + X3 * rho ** X4)
     return rho_function
 
 def compute_derivative_function_HY(rho, X2, X3, X4):
-    if rho < 0 or rho >= 1:
-        raise ValueError("rho must be in the range [0, 1).")
+    # if rho < 0 or rho >= 1:
+    #     raise ValueError("rho must be in the range [0, 1).")
     df_rho_function = (1 + 4 * rho + 4 * rho ** 2 - 4 * rho ** 3 + rho ** 4) / (1 - rho) ** 4 - 2 * X2 * rho + X3 * X4 * rho ** (X4 - 1)
     return df_rho_function
 
@@ -117,8 +117,8 @@ def compute_R_Values_DAK(Tpr, Ppr):
     return R1, R2, R3, R4, R5
 
 def compute_rho_function_DAK(Tpr, Ppr, rho):
-    if rho < 0 or rho >= 1:
-        raise ValueError("rho must be in the range [0, 1).")
+    # if rho < 0 or rho >= 1:
+    #     raise ValueError("rho must be in the range [0, 1).")
 
     R1, R2, R3, R4, R5 = compute_R_Values_DAK(Tpr, Ppr)
 
@@ -128,8 +128,8 @@ def compute_rho_function_DAK(Tpr, Ppr, rho):
     return rho_function
 
 def compute_derivative_function_DAK(Tpr, Ppr, rho):
-    if rho < 0 or rho >= 1:
-        raise ValueError("rho must be in the range [0, 1).")
+    # if rho < 0 or rho >= 1:
+    #     raise ValueError("rho must be in the range [0, 1).")
 
     R1, R2, R3, R4, R5 = compute_R_Values_DAK(Tpr, Ppr)
 
