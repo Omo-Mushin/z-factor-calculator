@@ -29,8 +29,8 @@ def compute_T_function_DPR(Tpr, Ppr):
     return T1, T2, T3, T4, T5
 
 def compute_rho_function_DPR(Tpr, Ppr, rho):
-    if rho < 0 or rho >= 1:
-        raise ValueError("rho must be in the range [0, 1).")
+    # if rho < 0 or rho >= 1:
+    #     raise ValueError("rho must be in the range [0, 1).")
 
     T1, T2, T3, T4, T5 = compute_T_function_DPR(Tpr, Ppr)
 
@@ -40,8 +40,8 @@ def compute_rho_function_DPR(Tpr, Ppr, rho):
     return rho_function
 
 def compute_derivative_function_DPR(Tpr, Ppr, rho):
-    if rho < 0 or rho >= 1:
-        raise ValueError("rho must be in the range [0, 1).")
+    # if rho < 0 or rho >= 1:
+    #     raise ValueError("rho must be in the range [0, 1).")
 
     T1, T2, T3, T4, T5 = compute_T_function_DPR(Tpr, Ppr)
     df_function = T1 + 2 * T2 * rho + 5 * T3 * rho ** 4 + \
